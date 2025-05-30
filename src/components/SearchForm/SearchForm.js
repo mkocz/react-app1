@@ -11,16 +11,20 @@ const SearchForm = () => {
 
     useEffect(() => {
         dispatch(updateSearchString({ searchString: '' }));
-    }, [dispatch]);
+    }, []);
 
     const handleSearch = () => {
         dispatch(updateSearchString({ searchString }));
     }
 
+    const handleChange = (event) => {
+        setSearchString(event.target.value)
+    }
+
     return (
         <form className={styles.searchForm}>
-            <TextInput placeholder='Search...' onChange={e => setSearchString(e.target.value)} />
-            <Button type='button' onClick={e => handleSearch()} > <span className="fa fa-search" /></Button>
+            <TextInput placeholder='Search...' onChange={handleChange} />
+            <Button type='button' onClick={handleSearch} > <span className="fa fa-search" /></Button>
         </form >
     );
 };

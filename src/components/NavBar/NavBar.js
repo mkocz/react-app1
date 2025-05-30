@@ -7,7 +7,7 @@ const NavBar = () => {
         <nav>
             <Container>
                 <div className={styles.navbar}>
-                    <Link to="/" className="fa fa-tasks" style={{ color: 'white' }}></Link>
+                    <Link to="/" ><span className={`fa fa-tasks ${styles.icon}`}></span></Link>
                     <ul className={styles.list}>
                         <li><NavLink to="/" className={({ isActive }) => isActive ? styles.linkActive : undefined}>Home</NavLink></li>
                         <li><NavLink to="/favorite" className={({ isActive }) => isActive ? styles.linkActive : undefined}>Favorite</NavLink></li>

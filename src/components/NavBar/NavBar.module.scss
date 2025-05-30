@@ -22,3 +22,7 @@
 .list .linkActive {
   color: $color-warning;
 }
+
+.icon::before {
+  color: $color-light;
+}
