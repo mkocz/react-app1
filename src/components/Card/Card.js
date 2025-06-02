@@ -6,7 +6,6 @@ const Card = props => {
     const dispatch = useDispatch();
 
     const handleClick = () => {
-        console.log(props.cardId)
         dispatch(toggleFavorite(props.cardId));
     }
 

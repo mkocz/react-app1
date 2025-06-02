@@ -10,11 +10,12 @@ const SearchForm = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(updateSearchString({ searchString: '' }));
+        setSearchString('')
+        dispatch(updateSearchString( searchString ));
     }, []);
 
     const handleSearch = () => {
-        dispatch(updateSearchString({ searchString }));
+        dispatch(updateSearchString(searchString ));
     }
 
     const handleChange = (event) => {
