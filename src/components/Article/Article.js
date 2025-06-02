@@ -6,7 +6,6 @@ import { getFilteredCards } from '../../redux/cardsRedux';
 
 const Article = props => {
     const cards = useSelector(state => getFilteredCards(state, props.id));
-    console.log(cards)
 
     return (<article className={styles.column}>
         <h3 className={styles.title}><span className={styles.icon + " fa fa-" + props.icon}></span>{props.title}</h3>
