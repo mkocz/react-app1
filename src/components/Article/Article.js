@@ -10,7 +10,7 @@ const Article = props => {
     return (<article className={styles.column}>
         <h3 className={styles.title}><span className={styles.icon + " fa fa-" + props.icon}></span> {props.title}</h3>
         <ul className={styles.cards}>
-            {cards.map(card => <Card key={card.id} title={card.title} />)}
+            {cards.map(card => <Card key={card.id} cardId={card.id} title={card.title} isFavorite={card.isFavorite} />)}
         </ul>
         <CardForm columnId={props.id} />
     </article>);
